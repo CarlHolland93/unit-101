@@ -1,0 +1,21 @@
+node_modules/
+.DS_Store
+.env
+.env.*
+!.env.example
+*.log
+.openai/
+.codex/
+coverage/
+
+public-dist/
+
+# Private source drawings and local preparation do not belong in this distribution.
+source/
+*.dwg
+work/
+
+# Generated capture frames and local Python environment.
+build/
+.venv/
+__pycache__/

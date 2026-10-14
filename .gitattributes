@@ -1,0 +1,12 @@
+* text=auto
+*.js text eol=lf
+*.mjs text eol=lf
+*.md text eol=lf
+*.dwg binary
+*.jpg binary
+*.png binary
+src/assets/** linguist-vendored=true -whitespace
+dist/** linguist-generated=true -whitespace
+
+*.gif binary
+media/** linguist-generated=true

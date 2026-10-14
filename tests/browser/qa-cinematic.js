@@ -1,0 +1,17 @@
+const w=window.walkthrough,checks=[];const test=(name,pass)=>checks.push({name,pass:!!pass});
+test('First view is the floor plan',w.mode==='plan'&&!document.getElementById('plan-wrap').hidden);
+test('Tabs ordered plan, overview, walkthrough',[...document.querySelectorAll('.view-tabs button')].map(b=>b.id).join(',')==='plan,overview,walk');
+document.getElementById('journey-next').click();test('Next leads to 3D overview',w.mode==='overview');document.getElementById('journey-next').click();test('Next enters walkthrough at Entry',w.mode==='walk'&&document.getElementById('view-title').textContent==='Entry'&&w.navigable(w.getPose().position));
+test('Tour defaults to 1.5x',w.tour.snapshot().playbackRate===1.5);
+await import('./qa-tour.js');document.getElementById('qa-result').hidden=true;
+const tourQA=JSON.parse(document.getElementById('qa-result').textContent);test('All 12 tour assertions pass at 1.5x',tourQA.assertions.every(a=>a.pass));test('Default tour lasts about 96 seconds',tourQA.tour.duration>95&&tourQA.tour.duration<97);
+await import('./qa-interactions.js');document.getElementById('interaction-qa-result').hidden=true;test('All scene interaction regressions pass',JSON.parse(document.getElementById('interaction-qa-result').textContent).assertions.every(a=>a.pass));
+w.tour.setPlaybackRate(2);w.tour.restart();let blocked=0,ticks=0;while(w.tour.state==='playing'&&ticks++<10000){w.tour.tick(.04);if(!w.navigable(w.getPose().position))blocked++;}test('Full 2x tour completes without collisions',w.tour.state==='complete'&&blocked===0);
+w.tour.setPlaybackRate(1.5);w.goRoom(w.rooms.find(r=>r.id==='living'));const render=w.rendering;
+render.resetMotion();render.render({motionBlur:true,dt:1/60});test('First frame stays sharp',!render.motionBlurActive);
+w.camera.rotation.y+=.018;render.render({motionBlur:true,dt:1/60});test('Camera movement activates GPU motion blur',render.motionBlurActive);
+const blurred=document.querySelector('#viewport canvas').toDataURL();render.render({motionBlur:false,dt:1/60});const sharp=document.querySelector('#viewport canvas').toDataURL();test('Blur changes the rendered image',blurred!==sharp);test('Blur off gives a sharp frame',!render.motionBlurActive);
+render.resetMotion();render.render({motionBlur:true,dt:1/60});render.render({motionBlur:true,dt:1/60});test('Stationary views stay sharp',!render.motionBlurActive);
+w.camera.rotation.y+=.018;render.render({motionBlur:true,dt:1/60});test('Blur resumes on movement',render.motionBlurActive);w.setMode('overview');render.render({motionBlur:true,dt:1/60});test('Overview never applies tour blur',!render.motionBlurActive);
+w.setMode('plan');test('Returning to the plan clears blur',!render.motionBlurActive);
+const pre=document.createElement('pre');pre.id='cinematic-qa-result';pre.textContent=JSON.stringify({checks,tourDuration:tourQA.tour.duration,fastTourCollisionFailures:blocked},null,2);pre.style='position:absolute;top:110px;left:265px;max-height:62vh;overflow:auto;z-index:30;background:white;padding:15px;font-size:11px';document.querySelector('main').appendChild(pre);

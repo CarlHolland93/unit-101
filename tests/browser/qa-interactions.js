@@ -1,0 +1,15 @@
+const w=window.walkthrough,ui=w.interactions,out={assertions:[],views:{}};let stamp=performance.now();
+const assert=(name,pass)=>out.assertions.push({name,pass:!!pass});
+const refresh=()=>ui.update(stamp+=300);
+const go=id=>{w.goRoom(w.rooms.find(r=>r.id===id));refresh();out.views[id]=ui.visibleIds};
+go('living');assert('Living scene exposes balcony and upholstery points',ui.visibleIds.includes('room-balcony')&&ui.visibleIds.includes('seating'));assert('Points behind walls stay hidden',!ui.visibleIds.includes('washer')&&!ui.visibleIds.includes('room-bathroom'));
+const seat=document.querySelector('[data-point="seating"]');seat.click();assert('In-scene detail opens correct accessible dialog',ui.dialog.open&&ui.dialog.querySelector('h2').textContent==='Living-room upholstery');ui.dialog.close();
+document.querySelector('[data-point="room-balcony"]').click();assert('Room point moves to clear destination',document.getElementById('view-title').textContent==='Balcony'&&w.navigable(w.getPose().position));
+go('kitchen');assert('Kitchen and fridge points available',ui.visibleIds.includes('kitchen')&&ui.visibleIds.includes('fridge'));
+go('laundry');assert('Washer point available',ui.visibleIds.includes('washer'));document.querySelector('[data-point="washer"]').click();assert('Washer card contains dimensions and source reference',ui.dialog.open&&ui.dialog.textContent.includes('600 W × 850 H')&&ui.dialog.querySelector('a').href.includes('samsung.com/hk_en'));ui.dialog.close();
+w.tour.restart();refresh();assert('Points hidden during guided playback',document.getElementById('scene-points').hidden&&ui.visibleIds.length===0);w.tour.pause();refresh();assert('Points return after pausing',!document.getElementById('scene-points').hidden);
+document.getElementById('points-toggle').click();refresh();assert('Point visibility toggle turns off scene layer',!ui.enabled&&document.getElementById('scene-points').hidden);document.getElementById('points-toggle').click();
+w.setMode('overview');refresh();assert('Overview offers room points only',ui.visibleIds.length>0&&ui.visibleIds.every(id=>id.startsWith('room-')));
+w.setMode('plan');refresh();assert('Floor plan stays clear of scene points',document.getElementById('scene-points').hidden);
+go('living');
+const pre=document.createElement('pre');pre.id='interaction-qa-result';pre.textContent=JSON.stringify(out,null,2);pre.style='position:absolute;top:100px;left:240px;max-height:60vh;overflow:auto;z-index:10;background:white;padding:12px';document.querySelector('main').append(pre);

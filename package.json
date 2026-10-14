@@ -1,0 +1,26 @@
+{
+  "name": "unit-101",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A browser-based architectural study: blueprint, 3D overview and first-person walkthrough",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node tests/tour-speed.mjs && node tests/package.mjs",
+    "qa": "node scripts/serve.mjs --qa"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.10"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CarlHolland93/unit-101.git"
+  },
+  "homepage": "https://github.com/CarlHolland93/unit-101",
+  "author": "Charlie Holland"
+}

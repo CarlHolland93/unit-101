@@ -1,0 +1,272 @@
+{
+  "provider": "Poly Haven and ambientCG",
+  "license": "CC0-1.0",
+  "licenseUrl": "https://polyhaven.com/license",
+  "downloaded": "2026-10-07",
+  "usage": "Locally bundled PBR finish materials; these finish selections are illustrative and not specified by the supplied DWG.",
+  "assets": [
+    {
+      "id": "laminate_floor_02",
+      "name": "Laminate Floor 02",
+      "page": "https://polyhaven.com/a/laminate_floor_02",
+      "authors": {
+        "Dario Barresi": "Processing",
+        "Charlotte Baglioni": "photography"
+      },
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "dimensions_mm": [
+        1699.9999284744263,
+        1700.0000476837158
+      ],
+      "description": "Free 8K laminate floor texture. Smooth, even brown wood-plank material with subtle grain, light satin sheen and fine seams, clean indoor appearance.",
+      "usage": "Cool pale oak finish, shader tint; true 1.7m scan repeat gives approximately 210mm planks.",
+      "maps": [
+        {
+          "kind": "Diffuse",
+          "file": "laminate_floor_02_diff_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/laminate_floor_02/laminate_floor_02_diff_1k.jpg",
+          "bytes": 721641,
+          "md5": "34ab81c5882c1083028ffa71d40fe44d"
+        },
+        {
+          "kind": "nor_gl",
+          "file": "laminate_floor_02_nor_gl_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/laminate_floor_02/laminate_floor_02_nor_gl_1k.jpg",
+          "bytes": 515725,
+          "md5": "40f4b1e4a5cafbd3bd1b02e8367cf3b1"
+        },
+        {
+          "kind": "Rough",
+          "file": "laminate_floor_02_rough_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/laminate_floor_02/laminate_floor_02_rough_1k.jpg",
+          "bytes": 560815,
+          "md5": "6ef14a4d438a44103689739248ef50b7"
+        }
+      ]
+    },
+    {
+      "id": "white_oak_veneer",
+      "name": "White Oak Veneer",
+      "page": "https://polyhaven.com/a/white_oak_veneer",
+      "authors": {
+        "Jenelle van Heerden": "All"
+      },
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "dimensions_mm": [
+        500,
+        500
+      ],
+      "description": "Free 8K texture of white oak veneer with fine, natural grain and subtle pores - smooth raw wood finish ideal for furniture, cabinetry, and interior renders.",
+      "maps": [
+        {
+          "kind": "Diffuse",
+          "file": "white_oak_veneer_diff_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_oak_veneer/white_oak_veneer_diff_1k.jpg",
+          "bytes": 595257,
+          "md5": "4ac6f031704bdc243f71cc61d692f823"
+        },
+        {
+          "kind": "nor_gl",
+          "file": "white_oak_veneer_nor_gl_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_oak_veneer/white_oak_veneer_nor_gl_1k.jpg",
+          "bytes": 623607,
+          "md5": "ce3dc086c58f50ba47c026a58d03fcbd"
+        },
+        {
+          "kind": "Rough",
+          "file": "white_oak_veneer_rough_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_oak_veneer/white_oak_veneer_rough_1k.jpg",
+          "bytes": 520649,
+          "md5": "ae2a746fc106f6eb0f90c92d49bd7643"
+        }
+      ]
+    },
+    {
+      "id": "poly_wool_herringbone",
+      "name": "Poly Wool Herringbone",
+      "page": "https://polyhaven.com/a/poly_wool_herringbone",
+      "authors": {
+        "colormass": "Photography",
+        "Rico Cilliers": "Processing"
+      },
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "dimensions_mm": [
+        270.0788548673393,
+        275.70000290870667
+      ],
+      "description": "Free 8K texture: grey poly\u2011wool herringbone with a rough woven surface; wool\u2011polyester blend ideal for upholstery, garments, and realistic fabric details.",
+      "maps": [
+        {
+          "kind": "Diffuse",
+          "file": "poly_wool_herringbone_diff_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/poly_wool_herringbone/poly_wool_herringbone_diff_1k.jpg",
+          "bytes": 942966,
+          "md5": "5c0981092ba0129d5951720ea23d50c2"
+        },
+        {
+          "kind": "nor_gl",
+          "file": "poly_wool_herringbone_nor_gl_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/poly_wool_herringbone/poly_wool_herringbone_nor_gl_1k.jpg",
+          "bytes": 1045151,
+          "md5": "a6371d03b033a1c20e1c2758136ac757"
+        },
+        {
+          "kind": "Rough",
+          "file": "poly_wool_herringbone_rough_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/poly_wool_herringbone/poly_wool_herringbone_rough_1k.jpg",
+          "bytes": 857426,
+          "md5": "9f85f667517ee9c7f3cc85214058a7d8"
+        }
+      ]
+    },
+    {
+      "id": "white_plaster_02",
+      "name": "White Plaster 02",
+      "page": "https://polyhaven.com/a/white_plaster_02",
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "dimensions_mm": [
+        1000,
+        1000
+      ],
+      "description": "Free 8K plaster texture: smooth, flat white plaster with a soft matte finish, fine micro-roughness and subtle dirt speckling across the surface.",
+      "maps": [
+        {
+          "kind": "Diffuse",
+          "file": "white_plaster_02_diff_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_plaster_02/white_plaster_02_diff_1k.jpg",
+          "bytes": 527219,
+          "md5": "7b10c2686bcfd76d1f309a20fd06b57e"
+        },
+        {
+          "kind": "nor_gl",
+          "file": "white_plaster_02_nor_gl_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_plaster_02/white_plaster_02_nor_gl_1k.jpg",
+          "bytes": 652310,
+          "md5": "55fc03203ebf1dc703a380fde93ff502"
+        },
+        {
+          "kind": "Rough",
+          "file": "white_plaster_02_rough_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_plaster_02/white_plaster_02_rough_1k.jpg",
+          "bytes": 295900,
+          "md5": "8b28f263360b8c4ddbdc4f7c650c4eeb"
+        }
+      ]
+    },
+    {
+      "id": "granite_tile",
+      "name": "Granite Tile",
+      "page": "https://polyhaven.com/a/granite_tile",
+      "authors": {
+        "Charlotte Baglioni": "All"
+      },
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "dimensions_mm": [
+        2299.999952316284,
+        2299.999952316284
+      ],
+      "description": "Free 8K texture: dark gray granite square tiles with subtle rough surface, low sheen and neat grout lines, tactile stone tile appearance.",
+      "maps": [
+        {
+          "kind": "Diffuse",
+          "file": "granite_tile_diff_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/granite_tile/granite_tile_diff_1k.jpg",
+          "bytes": 676597,
+          "md5": "5dfd6dbdb5c0b22ca04505c6209cea9f"
+        },
+        {
+          "kind": "nor_gl",
+          "file": "granite_tile_nor_gl_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/granite_tile/granite_tile_nor_gl_1k.jpg",
+          "bytes": 592362,
+          "md5": "e9053333e3db348d10466a781456ec58"
+        },
+        {
+          "kind": "Rough",
+          "file": "granite_tile_rough_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/granite_tile/granite_tile_rough_1k.jpg",
+          "bytes": 674755,
+          "md5": "fd4d40cbc28323260038eedb43bc6ff8"
+        }
+      ]
+    },
+    {
+      "id": "Marble012",
+      "name": "Marble 012",
+      "provider": "ambientCG",
+      "author": "Lennart Demes",
+      "page": "https://ambientcg.com/view?id=Marble012",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "technique": "Procedural PBR material",
+      "usage": "Countertops and tables; illustrative 2m repeat, grey tint.",
+      "maps": [
+        {
+          "kind": "Color",
+          "file": "Marble012_1K-JPG_Color.jpg",
+          "url": "https://ambientcg.com/get?file=Marble012_1K-JPG.zip",
+          "bytes": 1220876,
+          "sha256": "a34b55c889c6b3819d2c351b6409bfd0baf0a0a55b073441850627dfebcdcd1e"
+        },
+        {
+          "kind": "NormalGL",
+          "file": "Marble012_1K-JPG_NormalGL.jpg",
+          "url": "https://ambientcg.com/get?file=Marble012_1K-JPG.zip",
+          "bytes": 342955,
+          "sha256": "2e9a56525ffbb7e80854b19985a5c921f91192698ea337f4834192479ba0063b"
+        },
+        {
+          "kind": "Roughness",
+          "file": "Marble012_1K-JPG_Roughness.jpg",
+          "url": "https://ambientcg.com/get?file=Marble012_1K-JPG.zip",
+          "bytes": 535814,
+          "sha256": "f7afd636d6cca0b470549959c514976186df58ac1013016b6c3919910a6d3a04"
+        }
+      ]
+    }
+  ],
+  "material_scales_m": {
+    "pale_oak_floor": [
+      1.7,
+      1.7
+    ],
+    "oak_veneer": [
+      0.5,
+      0.5
+    ],
+    "grey_granite_tile": [
+      2.3,
+      2.3
+    ],
+    "plaster": [
+      1,
+      1
+    ],
+    "upholstery": [
+      0.2701,
+      0.2757
+    ],
+    "rug": [
+      0.6,
+      0.6
+    ],
+    "bedding": [
+      0.18,
+      0.18
+    ],
+    "grey_stone": [
+      2,
+      2
+    ]
+  },
+  "runtime": "No remote requests; local JPEG textures or window.WALKTHROUGH_TEXTURES data URLs.",
+  "palette": "Illustrative cool contemporary: pale desaturated oak, grey honed stone, silver wool, grey lacquer and graphite accents. Albedo grading is applied inside the physical lighting shader; source images are unchanged."
+}
